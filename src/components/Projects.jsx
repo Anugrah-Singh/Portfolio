@@ -1,6 +1,7 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { Github, ExternalLink, Folder } from 'lucide-react';
+import CardContainer from './common/CardContainer';
+import Button from './common/Button';
 
 const Projects = () => {
   // Sample project data - replace with your actual projects
@@ -29,27 +30,33 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   return (
-    <section id="projects" className="min-h-screen bg-gray-900 py-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="min-h-screen bg-[#000000] relative overflow-hidden py-20">
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-[#000000]">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+          <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
+          <div className="absolute -bottom-8 left-20 w-96 h-96 bg-indigo-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-300"></div>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
-            Featured Projects
+        <div className="text-center mb-16 animate-fadeIn">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 text-transparent bg-clip-text animate-gradient">
+              Featured Projects
+            </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience in software development.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-gray-800 rounded-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          {projects.map((project, index) => (
+            <CardContainer key={project.id} style={{ animationDelay: `${index * 100}ms` }}>
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -59,14 +66,14 @@ const Projects = () => {
                 />
                 
                 {/* Overlay on hover */}
-                <div className={`absolute inset-0 bg-blue-600/20 backdrop-blur-sm transition-opacity duration-300 flex items-center justify-center gap-4 ${
+                <div className={`absolute inset-0 bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-sm transition-opacity duration-300 flex items-center justify-center gap-4 ${
                   hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
                 }`}>
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-gray-900 rounded-full text-gray-300 hover:text-blue-500 transition-colors"
+                    className="p-2 bg-black/50 backdrop-blur-sm rounded-full text-gray-500 hover:text-purple-400 transition-all duration-300 transform hover:scale-110"
                   >
                     <Github size={24} />
                   </a>
@@ -74,7 +81,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-gray-900 rounded-full text-gray-300 hover:text-blue-500 transition-colors"
+                    className="p-2 bg-black/50 backdrop-blur-sm rounded-full text-gray-500 hover:text-purple-400 transition-all duration-300 transform hover:scale-110"
                   >
                     <ExternalLink size={24} />
                   </a>
@@ -84,13 +91,13 @@ const Projects = () => {
               {/* Project Info */}
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <Folder className="text-blue-500" size={20} />
-                  <h3 className="text-xl font-semibold text-gray-100">
+                  <Folder className="text-purple-400" size={20} />
+                  <h3 className="text-xl font-semibold text-gray-200">
                     {project.title}
                   </h3>
                 </div>
                 
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">
                   {project.description}
                 </p>
 
@@ -99,22 +106,22 @@ const Projects = () => {
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded-full"
+                      className="px-3 py-1.5 bg-black/30 backdrop-blur-md border border-gray-700/50 text-gray-400 text-sm rounded-full hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-            </div>
+            </CardContainer>
           ))}
         </div>
 
         {/* View More Button */}
         <div className="text-center mt-12">
-          <button className="px-6 py-3 border border-gray-700 hover:border-blue-500 text-gray-300 hover:text-blue-500 rounded-lg transition-colors duration-200">
+          <Button variant="secondary">
             View More Projects
-          </button>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,79 +1,61 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { School2 } from 'lucide-react'; // Importing icons (already present, keep them as they might be useful later)
+import { School2 } from 'lucide-react';
+import CardContainer from './common/CardContainer';
 
 const Path = () => {
-    // Sample path data - replace with your actual experience/path
     const pathItems = [
-        // {
-        //     id: 1,
-        //     type: "work", // or "education"
-        //     title: "Senior Software Engineer",
-        //     company: "Tech Innovations Co.", // Changed 'subtitle' to 'company' for clarity
-        //     dateRange: "2022 - Present",
-        //     description: "Led the development of a new cloud-based platform, resulting in a 40% increase in system efficiency. Mentored junior engineers and promoted best practices in agile development.",
-        //     icon: Briefcase
-        // },
-        // {
-        //     id: 2,
-        //     type: "work",
-        //     title: "Software Engineer",
-        //     company: "Global Solutions Inc.", // Changed 'subtitle' to 'company' for clarity
-        //     dateRange: "2020 - 2022",
-        //     description: "Worked on a diverse range of projects, from web applications to mobile solutions, gaining expertise in full-stack development and cross-functional team collaboration.",
-        //     icon: Briefcase
-        // },
         {
             id: 1,
             type: "education",
-            title: "BE in Computer Science",
-            company: "VTU", // Using 'company' for University name for consistency in data structure
+            title: "Bachelor of Engineering in Computer Science",
+            company: "Acharya Institute of Technology",
             dateRange: "2023 - 2027",
             description: "Software Engineering",
             icon: School2
         },
-        // Add more path items as needed
     ];
 
     return (
-        <section id="path" className="min-h-screen bg-gray-900 py-20">
-            <div className="max-w-7xl mx-auto px-6"> {/* Slightly wider max-w for timeline */}
-                {/* Section Header */}
-                <div className="text-center mb-12"> {/* Reduced mb for header to be closer to timeline */}
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-2"> {/* Reduced mb for title */}
-                        My Path
+        <section id="path" className="min-h-screen bg-[#000000] relative overflow-hidden py-20">
+            <div className="absolute inset-0 bg-[#000000]">
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                    <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
+                    <div className="absolute -bottom-8 left-20 w-96 h-96 bg-indigo-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-300"></div>
+                </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="text-center mb-12 animate-fadeIn">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 text-transparent bg-clip-text animate-gradient">
+                            My Path
+                        </span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
                         Discover my professional path and experiences.
                     </p>
                 </div>
 
-                {/* Timeline Container */}
                 <div className="relative">
-                    {/* Timeline Line */}
-                    <div className="absolute left-1/2 top-6 md:top-8 -translate-x-1/2 h-full w-0.5 bg-gray-700"></div> {/* Vertical line */}
+                    <div className="absolute left-1/2 top-6 md:top-8 -translate-x-1/2 h-full w-0.5 bg-gray-800"></div>
 
-                    {/* Timeline Items */}
                     {pathItems.map((item, index) => (
-                        <div key={item.id} className="mb-8 md:mb-12 relative">
+                        <div key={item.id} className="mb-8 md:mb-12 relative animate-slideUp" style={{ animationDelay: `${index * 100}ms` }}>
                             <div className="flex items-center">
-                                {/* Timeline Circle */}
-                                <div className="w-4 h-4 rounded-full bg-blue-500 z-10"></div>
-
-                                {/* Timeline Item Card */}
-                                <div className="ml-4 md:ml-8 p-4 md:p-6 bg-gray-800 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-semibold text-gray-100">{item.title}</h3>
-                                    <h4 className="text-gray-300 font-medium">{item.company}</h4> {/* Company as subtitle */}
-                                    <p className="text-gray-400 mt-2">{item.dateRange}</p>
-                                    <p className="text-gray-400 mt-3">{item.description}</p>
-                                </div>
+                                <div className="w-4 h-4 rounded-full bg-purple-400 z-10"></div>
+                                <CardContainer>
+                                    <div className="ml-4 md:ml-8 p-4 md:p-6 bg-black/30 backdrop-blur-md border-2 border-gray-800/50 rounded-lg hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+                                        <h3 className="text-xl font-semibold text-gray-200">{item.title}</h3>
+                                        <h4 className="text-gray-500 font-medium">{item.company}</h4>
+                                        <p className="text-gray-500 mt-2">{item.dateRange}</p>
+                                        <p className="text-gray-500 mt-3">{item.description}</p>
+                                    </div>
+                                </CardContainer>
                             </div>
                         </div>
                     ))}
                 </div>
-
-                {/* No "View More" Button for Timeline - Consider Infinite Scroll or Pagination for long paths */}
-
             </div>
         </section>
     );
