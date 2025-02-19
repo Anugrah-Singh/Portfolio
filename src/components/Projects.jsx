@@ -8,7 +8,7 @@ const Projects = () => {
     {
       id: 1,
       title: "Rio Blog",
-      description: "A full-stack blog application built with React, Node.js, and MongoDB. Features include user authentication, CRUD operations, and more.",
+      description: "A simple blog application built with React, Vite, and Appwrite for backend services.",
       tags: ["React", "Vite", "Appwrite", "Tailwind"],
       githubLink: "https://github.com/Anugrah-Singh/Blog",
       liveLink: "https://rioblog.vercel.app/",
