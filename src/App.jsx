@@ -1,17 +1,17 @@
-import { NavBar, Hero,  Projects, Skills, About, Path, ContactMe} from './components'
+import { Navbar, Hero,  Projects, Skills, About, Path, ContactMe} from './components'
 
 function App() {
 
   return (
-    <>
-      <NavBar />
+    <div className='bg-black min-h-screen overflow-x-hidden'>
+      <Navbar />
       <Hero />
       <Projects />
       <Skills />
       <About />
       <Path />
       <ContactMe />
-    </>
+    </div>
   )
 }
 

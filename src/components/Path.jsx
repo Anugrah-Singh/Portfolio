@@ -37,15 +37,15 @@ const Path = () => {
                     </p>
                 </div>
 
-                <div className="relative">
-                    <div className="absolute left-1/2 top-6 md:top-8 -translate-x-1/2 h-full w-0.5 bg-gray-800"></div>
+                <div className="relative w-full">
+                    <div className="absolute left-0 md:left-1/2 top-0 h-full w-0.5 bg-gray-800 transform md:-translate-x-1/2"></div>
 
                     {pathItems.map((item, index) => (
                         <div key={item.id} className="mb-8 md:mb-12 relative animate-slideUp" style={{ animationDelay: `${index * 100}ms` }}>
                             <div className="flex items-center">
                                 <div className="w-4 h-4 rounded-full bg-purple-400 z-10"></div>
                                 <CardContainer>
-                                    <div className="ml-4 md:ml-8 p-4 md:p-6 bg-black/30 backdrop-blur-md border-2 border-gray-800/50 rounded-lg hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+                                    <div className="w-full md:w-1/2 md:ml-auto pl-8 md:pl-12 ml-4 md:ml-8 p-4 md:p-6 bg-black/30 backdrop-blur-md border-2 border-gray-800/50 rounded-lg hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
                                         <h3 className="text-lg md:text-xl font-semibold text-gray-200">{item.title}</h3>
                                         <h4 className="text-gray-500 font-medium">{item.company}</h4>
                                         <p className="text-gray-500 mt-2">{item.dateRange}</p>

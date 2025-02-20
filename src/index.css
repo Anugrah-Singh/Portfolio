@@ -7,3 +7,24 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+@media (max-width: 600px) {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  max-width: 100vw;
+  box-sizing: border-box;
+}

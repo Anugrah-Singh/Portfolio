@@ -48,14 +48,12 @@ const Skills = () => {
   ];
 
   return (
-	<section id="skills" className="min-h-screen bg-[#000000] relative overflow-hidden py-12 sm:py-20">
-	  {/* Animated background gradient */}
-	  <div className="absolute inset-0 bg-[#000000]">
-		<div className="absolute inset-0 opacity-10">
-		  <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-		  <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
-		  <div className="absolute -bottom-8 left-20 w-96 h-96 bg-indigo-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-300"></div>
-		</div>
+	<section id="skills" className="min-h-screen w-screen overflow-hidden bg-[#000000] relative py-12 sm:py-20">
+	  {/* Adjust background element sizes */}
+	  <div className="absolute inset-0 overflow-hidden">
+		<div className="absolute top-0 -left-4 w-64 sm:w-96 h-64 sm:h-96 bg-purple-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+		<div className="absolute top-0 -right-4 w-96 h-96 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
+		<div className="absolute -bottom-8 left-20 w-96 h-96 bg-indigo-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-300"></div>
 	  </div>
 
 	  <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
@@ -72,24 +70,26 @@ const Skills = () => {
 		</div>
 
 		{/* Skills Grid */}
-		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 mx-auto justify-items-center">
+		<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-full max-w-6xl mx-auto">
 		  {skills.map((skill, index) => (
 			<CardContainer key={skill.id} style={{ animationDelay: `${index * 100}ms` }}>
-			  <div className="flex items-center gap-3 mb-4">
-				{skill.icon && (
-				  <skill.icon 
-					className="text-purple-400" 
-					size={24} 
-				  />
-				)}
-				<h3 className="text-xl font-semibold text-gray-200">
-				  {skill.skill}
-				</h3>
+			  <div className="p-4 sm:p-6 w-full">
+				<div className="flex items-center gap-3 mb-4">
+				  {skill.icon && (
+					<skill.icon 
+					  className="text-purple-400" 
+					  size={24} 
+					/>
+				  )}
+				  <h3 className="text-xl font-semibold text-gray-200">
+					{skill.skill}
+				  </h3>
+				</div>
+				<p className="text-gray-500">
+				  {skill.description}
+				</p>
 			  </div>
-			  <p className="text-gray-500">
-				{skill.description}
-			  </p>
-			 </CardContainer>
+			</CardContainer>
 		  ))}
 		</div>
 

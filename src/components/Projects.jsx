@@ -54,11 +54,11 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 justify-items-center">
           {projects.map((project, index) => (
             <CardContainer key={project.id} style={{ animationDelay: `${index * 100}ms` }}>
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 sm:h-56 md:h-64 w-full overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}

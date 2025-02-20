@@ -6,15 +6,13 @@ const About = () => {
     return (
         <section 
             id="about" 
-            className="min-h-screen flex items-center justify-center bg-gradient-to-bl from-gray-900 via-black to-gray-900 py-20"
+            className="min-h-screen w-screen overflow-hidden flex items-center justify-center bg-gradient-to-bl from-gray-900 via-black to-gray-900 py-20"
         >
-            {/* Enhanced animated background */}
-            <div className="absolute inset-0 bg-black">
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-0 -left-4 w-[32rem] h-[32rem] bg-purple-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-                    <div className="absolute top-0 -right-4 w-[32rem] h-[32rem] bg-blue-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
-                    <div className="absolute -bottom-8 left-20 w-[32rem] h-[32rem] bg-indigo-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-300"></div>
-                </div>
+            {/* Adjust background sizes */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute top-0 -left-4 w-64 sm:w-[32rem] h-64 sm:h-[32rem] bg-purple-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div className="absolute top-0 -right-4 w-[32rem] h-[32rem] bg-blue-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
+                <div className="absolute -bottom-8 left-20 w-[32rem] h-[32rem] bg-indigo-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-300"></div>
             </div>
 
             <div className="max-w-6xl mx-auto px-6 relative z-10">

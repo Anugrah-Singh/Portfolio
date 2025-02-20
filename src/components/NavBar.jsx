@@ -16,8 +16,8 @@ const Navbar = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10 opacity-30"></div>
             <div className="absolute inset-0 bg-[#000000]/80 backdrop-blur-sm">
                 <div className="absolute inset-0 opacity-10">
-                    <div className="absolute -top-20 left-0 w-72 h-72 bg-purple-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-                    <div className="absolute -top-20 right-0 w-72 h-72 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
+                    <div className="absolute -top-20 left-0 w-72 h-72 bg-purple-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse md:block hidden"></div>
+                    <div className="absolute -top-20 right-0 w-72 h-72 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700 md:block hidden"></div>
                 </div>
             </div>
 
@@ -25,14 +25,16 @@ const Navbar = () => {
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center space-x-3 group">
                         <div className="w-3 h-3 bg-gradient-to-r from-blue-800 to-purple-800 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-                        <span className="text-gray-400 font-medium group-hover:text-purple-400 transition-colors duration-300">Open to work</span>
+                        <span className="text-sm md:text-base text-gray-400 font-medium group-hover:text-purple-400 transition-colors duration-300">
+                            Open to work
+                        </span>
                     </div>
 
                     <button 
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="md:hidden text-gray-400 hover:text-purple-400"
+                        className="md:hidden p-2 text-gray-400 hover:text-purple-400 transition-colors"
                     >
-                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
 
                     <div className="hidden md:flex space-x-8">
@@ -50,7 +52,7 @@ const Navbar = () => {
                 </div>
 
                 {isMenuOpen && (
-                    <div className="md:hidden absolute top-16 left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-gray-800">
+                    <div className="md:hidden absolute top-16 left-0 right-0 bg-black/95 backdrop-blur-2xl border-t border-gray-800">
                         {['Home', 'Projects', 'Skills', 'Path'].map((item) => (
                             <button
                                 key={item}
@@ -58,7 +60,7 @@ const Navbar = () => {
                                     scrollToSection(item.toLowerCase());
                                     setIsMenuOpen(false);
                                 }}
-                                className="block w-full text-left px-6 py-4 text-gray-400 hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300"
+                                className="block w-full text-left px-6 py-4 text-lg text-gray-400 hover:text-purple-400 hover:bg-purple-500/10 active:bg-purple-500/20 transition-all duration-300"
                             >
                                 {item}
                             </button>
