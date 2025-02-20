@@ -54,7 +54,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {projects.map((project, index) => (
             <CardContainer key={project.id} style={{ animationDelay: `${index * 100}ms` }}>
               {/* Project Image */}

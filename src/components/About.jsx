@@ -60,17 +60,16 @@ const About = () => {
                             </div>
                         </CardContainer>
                     </div>
-
-                    <div className="grid grid-cols-1 gap-8">
-                        <CardContainer>
+                    <div className="grid grid-cols-1 gap-8 bg-black/20 backdrop-blur-xl border-2 border-gray-600 rounded-2xl p-6">
+                        <div className="p-6 rounded-xl bg-black/20 shadow-md hover:shadow-2xl transition-transform transform hover:scale-[1.02] [animation-delay:300ms]">
                             <div className="flex items-start justify-between mb-4"> {/* items-start for top alignment */}
                                 <h3 className="text-xl font-semibold text-gray-100">I am also a videographer</h3>
-                                <a href="https://www.instagram.com/anugrahsinngh?igsh=MWhqdmZpNjRqcDd0dQ==" className="text-gray-300 hover:text-blue-500 transition-colors">
-                                    <Instagram size={20} />
-                                </a>
                             </div>
                             <p className="text-gray-400">Check out my content on Instagram</p>
-                        </CardContainer>
+                            <a href="https://www.instagram.com/anugrahsinngh?igsh=MWhqdmZpNjRqcDd0dQ==" className="text-gray-300 hover:text-blue-500 transition-colors">
+                                <Instagram size={250} className=' object-center py-5'/>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

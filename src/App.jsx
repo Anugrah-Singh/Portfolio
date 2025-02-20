@@ -1,10 +1,10 @@
-import { NavBarMenu, Hero,  Projects, Skills, About, Path, ContactMe} from './components'
+import { NavBar, Hero,  Projects, Skills, About, Path, ContactMe} from './components'
 
 function App() {
 
   return (
     <>
-      <NavBarMenu />
+      <NavBar />
       <Hero />
       <Projects />
       <Skills />

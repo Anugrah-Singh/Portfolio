@@ -13,20 +13,20 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden pt-20"
     >
       {/* Enhanced animated background */}
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-700/30 via-blue-600/20 to-indigo-600/30 mix-blend-multiply animate-pulse" />
 
-      <div className="max-w-6xl mx-auto px-6 py-16 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-16 relative z-10">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16">
           {/* Left side - Enhanced text content */}
-          <div className="flex-1 space-y-10">
+          <div className="flex-1 space-y-6 sm:space-y-10 text-center md:text-left">
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="text-sm font-medium text-purple-400 mb-2 block animate-slideUp">Welcome to my portfolio</span>
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold animate-fadeIn">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold animate-fadeIn">
                 <span className="text-white">Hi, I&apos;m </span>
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 text-transparent bg-clip-text animate-gradient">
                   Anugrah

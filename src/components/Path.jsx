@@ -27,12 +27,12 @@ const Path = () => {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-12 animate-fadeIn">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
                         <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 text-transparent bg-clip-text animate-gradient">
                             My Path
                         </span>
                     </h2>
-                    <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
+                    <p className="text-gray-500 text-base md:text-xl max-w-2xl mx-auto">
                         Discover my professional path and experiences.
                     </p>
                 </div>
@@ -46,7 +46,7 @@ const Path = () => {
                                 <div className="w-4 h-4 rounded-full bg-purple-400 z-10"></div>
                                 <CardContainer>
                                     <div className="ml-4 md:ml-8 p-4 md:p-6 bg-black/30 backdrop-blur-md border-2 border-gray-800/50 rounded-lg hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-                                        <h3 className="text-xl font-semibold text-gray-200">{item.title}</h3>
+                                        <h3 className="text-lg md:text-xl font-semibold text-gray-200">{item.title}</h3>
                                         <h4 className="text-gray-500 font-medium">{item.company}</h4>
                                         <p className="text-gray-500 mt-2">{item.dateRange}</p>
                                         <p className="text-gray-500 mt-3">{item.description}</p>

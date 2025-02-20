@@ -48,7 +48,7 @@ const Skills = () => {
   ];
 
   return (
-	<section id="skills" className="min-h-screen bg-[#000000] relative overflow-hidden py-20">
+	<section id="skills" className="min-h-screen bg-[#000000] relative overflow-hidden py-12 sm:py-20">
 	  {/* Animated background gradient */}
 	  <div className="absolute inset-0 bg-[#000000]">
 		<div className="absolute inset-0 opacity-10">
@@ -58,21 +58,21 @@ const Skills = () => {
 		</div>
 	  </div>
 
-	  <div className="max-w-6xl mx-auto px-6 relative z-10">
+	  <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
 		{/* Section Header */}
-		<div className="text-center mb-16 animate-fadeIn">
-		  <h2 className="text-4xl md:text-5xl font-bold mb-4">
+		<div className="text-center mb-8 sm:mb-16 animate-fadeIn">
+		  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
 			<span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 text-transparent bg-clip-text animate-gradient">
 			  My Skills
 			</span>
 		  </h2>
-		  <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
+		  <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
 			A quick overview of my technical skills and areas of expertise.
 		  </p>
 		</div>
 
 		{/* Skills Grid */}
-		<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mx-auto justify-items-center">
+		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 mx-auto justify-items-center">
 		  {skills.map((skill, index) => (
 			<CardContainer key={skill.id} style={{ animationDelay: `${index * 100}ms` }}>
 			  <div className="flex items-center gap-3 mb-4">
@@ -94,7 +94,7 @@ const Skills = () => {
 		</div>
 
 		{/* View More Button */}
-		<div className="text-center mt-12">
+		<div className="text-center mt-8 sm:mt-12">
 		  <Button variant="secondary">
 			View More Skills (Coming Soon)
 		  </Button>
