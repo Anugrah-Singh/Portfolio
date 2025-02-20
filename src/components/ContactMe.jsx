@@ -29,58 +29,56 @@ const ContactMe = () => {
                 </div>
 
                 {/* Contact Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full max-w-6xl mx-auto">
-                    <div className="w-full h-full">
-                        <CardContainer>
-                            <div className="p-6 animate-slideUp">
-                                <h3 className="text-2xl font-semibold text-gray-200 mb-4">
-                                    Let&apos;s Connect!
-                                </h3>
-                                <p className="text-gray-400 mb-6">
-                                    I&apos;m open to discussing new projects, collaborations, and hearing about exciting opportunities.
-                                    Whether you have a question or just want to say hi, don&apos;t hesitate to get in touch.
-                                </p>
-                                <p className="text-gray-400">
-                                    I&apos;ll do my best to get back to you as soon as possible.
-                                </p>
-                            </div>
-                        </CardContainer>
-                        <CardContainer>
-                            <div className="p-6 animate-slideUp [animation-delay:200ms]">
-                                <h3 className="text-2xl font-semibold text-gray-200 mb-4">
-                                    Contact Information
-                                </h3>
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <Mail className="text-blue-500" size={20} />
-                                        <p className="text-gray-300">Email:</p>
-                                        <a href="mailto:your.email@example.com" className="text-gray-100 hover:text-blue-500 transition-colors">anugrahsinngh@gmail.com</a> {/* Replace with your actual email */}
-                                    </div>
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <Linkedin className="text-blue-500" size={20} />
-                                        <p className="text-gray-300">LinkedIn:</p>
-                                        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-blue-500 transition-colors">
-                                            
-                                        </a> {/* Replace with your LinkedIn profile URL */}
-                                    </div>
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <Github className="text-blue-500" size={20} />
-                                        <p className="text-gray-300">Github:</p>
-                                        <a href="https://github.com/Anugrah-Singh" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-blue-500 transition-colors">
-                                            Anugrah-Singh
-                                        </a> {/* Replace with your GitHub profile URL */}
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <FaXTwitter className="text-blue-500" size={20} />
-                                        <p className="text-gray-300">Twitter:</p>
-                                        <a href="https://x.com/anugahsingh" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-blue-500 transition-colors">
-                                            anugrahsinngh
-                                        </a> {/* Replace with your Twitter profile URL */}
-                                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <CardContainer>
+                        <div className="p-6 animate-slideUp">
+                            <h3 className="text-2xl font-semibold text-gray-200 mb-4">
+                                Let&apos;s Connect!
+                            </h3>
+                            <p className="text-gray-400 mb-6">
+                                I&apos;m open to discussing new projects, collaborations, and hearing about exciting opportunities.
+                                Whether you have a question or just want to say hi, don&apos;t hesitate to get in touch.
+                            </p>
+                            <p className="text-gray-400">
+                                I&apos;ll do my best to get back to you as soon as possible.
+                            </p>
+                        </div>
+                    </CardContainer>
+                    <CardContainer>
+                        <div className="p-6 animate-slideUp [animation-delay:200ms]">
+                            <h3 className="text-2xl font-semibold text-gray-200 mb-4">
+                                Contact Information
+                            </h3>
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Mail className="text-blue-500" size={20} />
+                                    <p className="text-gray-300">Email:</p>
+                                    <a href="mailto:your.email@example.com" className="text-gray-100 hover:text-blue-500 transition-colors">anugrahsinngh@gmail.com</a> {/* Replace with your actual email */}
+                                </div>
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Linkedin className="text-blue-500" size={20} />
+                                    <p className="text-gray-300">LinkedIn:</p>
+                                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-blue-500 transition-colors">
+                                        
+                                    </a> {/* Replace with your LinkedIn profile URL */}
+                                </div>
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Github className="text-blue-500" size={20} />
+                                    <p className="text-gray-300">Github:</p>
+                                    <a href="https://github.com/Anugrah-Singh" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-blue-500 transition-colors">
+                                        Anugrah-Singh
+                                    </a> {/* Replace with your GitHub profile URL */}
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <FaXTwitter className="text-blue-500" size={20} />
+                                    <p className="text-gray-300">Twitter:</p>
+                                    <a href="https://x.com/anugahsingh" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-blue-500 transition-colors">
+                                        anugrahsinngh
+                                    </a> {/* Replace with your Twitter profile URL */}
                                 </div>
                             </div>
-                        </CardContainer>
-                    </div>
+                        </div>
+                    </CardContainer>
                 </div>
             </div>
         </section>
