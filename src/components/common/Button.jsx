@@ -3,8 +3,8 @@
 
 const buttonStyles = {
   base: "px-6 py-3 rounded-lg font-medium transition-all duration-300 transform",
-  primary: "bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30",
-  secondary: "border-2 border-purple-500/30 text-gray-300 hover:border-purple-400 hover:text-white bg-black/50 backdrop-blur-sm hover:scale-105 hover:shadow-lg hover:shadow-purple-900/20"
+  primary: "bg-white text-black hover:scale-105 hover:shadow-lg",
+  secondary: "border-2 border-gray-400 text-gray-300 hover:bg-white hover:text-black"
 };
 
 const Button = ({ children, variant = "primary", onClick }) => {
