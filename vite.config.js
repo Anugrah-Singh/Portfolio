@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
   ],
   // If deploying to a subdirectory, uncomment and modify the base path
-  // base: '/',
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
