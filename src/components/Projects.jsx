@@ -17,7 +17,7 @@ const Projects = () => {
       tags: ["React", "Vite", "Appwrite", "Tailwind"],
       githubLink: "https://github.com/Anugrah-Singh/Blog",
       liveLink: "https://rioblog.vercel.app/",
-      image: "../../public/image.png"
+      image: "/image.png"  // Changed from "../../public/image.png"
     },
     // Add more projects as needed
   ];
