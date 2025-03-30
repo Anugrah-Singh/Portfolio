@@ -99,14 +99,14 @@ const Skills = () => {
         </div>
 
         {/* View More Button */}
-        <div className="text-center mt-8 sm:mt-12" data-aos="fade-up" data-aos-delay="200">
+        {/* <div className="text-center mt-8 sm:mt-12" data-aos="fade-up" data-aos-delay="200">
           <Button
             variant="secondary"
             className="border border-gray-400 text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 px-6 py-3 rounded-md"
           >
             View More Skills (Coming Soon)
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

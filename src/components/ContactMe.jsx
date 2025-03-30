@@ -78,12 +78,12 @@ const ContactMe = () => {
                                     <Linkedin className="text-blue-500" size={20} />
                                     <p className="text-gray-300">LinkedIn:</p>
                                     <a
-                                        href="https://linkedin.com/in/yourprofile"
+                                        href="https://linkedin.com/in/anugrah-singh-a04b18356"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-gray-100 hover:text-blue-500 transition-colors"
                                     >
-                                        yourprofile
+                                        Anugrah Singh
                                     </a>
                                 </div>
                                 <div className="flex items-center gap-3">

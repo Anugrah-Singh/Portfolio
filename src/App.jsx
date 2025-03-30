@@ -8,7 +8,7 @@ function App() {
       <Hero />
       <Projects />
       <Skills />
-      <About />
+      {/* <About /> */}
       <Path />
       <ContactMe />
     </div>

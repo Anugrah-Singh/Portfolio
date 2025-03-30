@@ -31,10 +31,20 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Left side - 'Open to work' */}
           <div className="flex items-center space-x-3" data-aos="fade-right">
-            <div className="w-3 h-3 bg-white rounded-full transition-transform duration-300"></div>
-            <span className="text-sm md:text-base text-white font-medium">
-              Open to work
-            </span>
+            {/* <div className="flex items-baseline">
+              <span className="text-base md:text-lg text-white font-bold">
+                Portfolio<span className="text-xs align-super font-medium">2024</span>
+              </span>
+              <span className="hidden md:inline-block text-xs text-gray-400 italic ml-2">
+                Crafting Digital Experiences
+              </span>
+            </div> */}
+            <div className="flex items-center space-x-1.5 ml-3">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-xs md:text-sm text-white font-medium">
+                Open to work
+              </span>
+            </div>
           </div>
 
           {/* Mobile menu toggle */}

@@ -91,6 +91,14 @@ const Hero = () => {
               data-aos-delay="600"
             >
               <a 
+                href="https://linkedin.com/in/anugrah-singh-a04b18356" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+              >
+                <Linkedin size={28} />
+              </a>
+              <a 
                 href="https://github.com/Anugrah-Singh" 
                 target="_blank" 
                 rel="noopener noreferrer"
