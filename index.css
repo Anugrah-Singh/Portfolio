@@ -410,6 +410,8 @@ input:focus-visible {
 
 /* Terminal ASCII Canvas Card */
 .terminal-card {
+  grid-column: 1 / -1;
+  width: 100%;
   background-color: var(--bg-dark);
   color: #00ff66;
   border: var(--border-width) solid var(--border-color);
@@ -447,9 +449,9 @@ input:focus-visible {
 .dot-green { background: #27c93f; }
 
 .terminal-body {
-  padding: var(--space-3);
-  font-size: 0.82rem;
-  line-height: 1.4;
+  padding: var(--space-4);
+  font-size: 0.85rem;
+  line-height: 1.5;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -480,11 +482,11 @@ input:focus-visible {
 }
 
 .cmd-logs-container {
-  max-height: 150px;
+  max-height: 180px;
   overflow-y: auto;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: #e4e4e7;
-  line-height: 1.45;
+  line-height: 1.5;
   margin-bottom: var(--space-2);
 }
 
