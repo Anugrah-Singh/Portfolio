@@ -247,12 +247,26 @@ input:focus-visible {
 }
 
 .section-header {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: var(--space-5);
   border-bottom: 2px dashed var(--border-color);
   padding-bottom: var(--space-2);
+}
+
+.section-header::after {
+  content: '+';
+  position: absolute;
+  right: -6px;
+  bottom: -14px;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--border-color);
+  background: var(--bg-main);
+  padding: 0 4px;
 }
 
 .section-num {
@@ -396,6 +410,15 @@ input:focus-visible {
   border-color: var(--border-color);
 }
 
+.stat-tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
 .stat-number {
   font-family: var(--font-mono);
   font-size: 1.4rem;
@@ -468,6 +491,7 @@ input:focus-visible {
   white-space: pre;
   color: #00e5ff;
   line-height: 1.1;
+  font-size: clamp(0.5rem, 1.8vw, 0.85rem);
   margin-bottom: var(--space-3);
   display: flex;
   flex-direction: column;
@@ -501,6 +525,23 @@ input:focus-visible {
   line-height: 1.5;
   margin-bottom: var(--space-2);
   text-align: left;
+}
+
+.cmd-logs-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cmd-logs-container::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+.cmd-logs-container::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 2px;
+}
+
+.cmd-logs-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
 }
 
 .cmd-input-line {
