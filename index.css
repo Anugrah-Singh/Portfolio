@@ -479,8 +479,9 @@ input:focus-visible {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
   overflow-x: auto;
 }
 
@@ -491,26 +492,32 @@ input:focus-visible {
   line-height: 1.1;
   font-size: clamp(0.5rem, 1.8vw, 0.85rem);
   margin-bottom: var(--space-3);
-  display: block;
-  text-align: left;
+  display: block !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 .terminal-typewriter {
   color: #ffffff;
   font-family: var(--font-mono);
   margin-bottom: var(--space-3);
-  text-align: left;
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  width: 100% !important;
 }
 
 /* Hero Terminal Interactive Command Console */
 .hero-terminal-cmd {
-  width: 100%;
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   margin-top: var(--space-2);
   padding-top: var(--space-3);
   border-top: 1px dashed #3f3f46;
   font-family: var(--font-mono);
-  text-align: left;
+  text-align: left !important;
+  margin-left: 0 !important;
 }
 
 .cmd-logs-container {
@@ -520,7 +527,7 @@ input:focus-visible {
   color: #e4e4e7;
   line-height: 1.5;
   margin-bottom: var(--space-2);
-  text-align: left;
+  text-align: left !important;
 }
 
 .cmd-logs-container::-webkit-scrollbar {
