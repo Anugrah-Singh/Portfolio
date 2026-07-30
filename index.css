@@ -435,9 +435,7 @@ input:focus-visible {
 .terminal-card {
   grid-column: 1 / -1;
   width: 100%;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;
   background-color: var(--bg-dark);
   color: #00ff66;
   border: var(--border-width) solid var(--border-color);
@@ -509,7 +507,7 @@ input:focus-visible {
 /* Hero Terminal Interactive Command Console */
 .hero-terminal-cmd {
   width: 100%;
-  max-width: 820px;
+  max-width: 100%;
   margin-top: var(--space-2);
   padding-top: var(--space-3);
   border-top: 1px dashed #3f3f46;
