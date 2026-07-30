@@ -412,6 +412,9 @@ input:focus-visible {
 .terminal-card {
   grid-column: 1 / -1;
   width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--bg-dark);
   color: #00ff66;
   border: var(--border-width) solid var(--border-color);
@@ -455,7 +458,8 @@ input:focus-visible {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   overflow-x: auto;
 }
 
@@ -465,29 +469,38 @@ input:focus-visible {
   color: #00e5ff;
   line-height: 1.1;
   margin-bottom: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .terminal-typewriter {
   color: #ffffff;
   font-family: var(--font-mono);
   margin-bottom: var(--space-3);
+  text-align: center;
 }
 
 /* Hero Terminal Interactive Command Console */
 .hero-terminal-cmd {
-  margin-top: var(--space-3);
+  width: 100%;
+  max-width: 820px;
+  margin-top: var(--space-2);
   padding-top: var(--space-3);
   border-top: 1px dashed #3f3f46;
   font-family: var(--font-mono);
+  text-align: left;
 }
 
 .cmd-logs-container {
-  max-height: 180px;
+  max-height: 160px;
   overflow-y: auto;
   font-size: 0.85rem;
   color: #e4e4e7;
   line-height: 1.5;
   margin-bottom: var(--space-2);
+  text-align: left;
 }
 
 .cmd-input-line {
