@@ -433,6 +433,7 @@ input:focus-visible {
 
 /* Terminal ASCII Canvas Card */
 .terminal-card {
+  position: relative;
   grid-column: 1 / -1;
   width: 100%;
   max-width: 100%;
@@ -445,7 +446,21 @@ input:focus-visible {
   overflow: hidden;
 }
 
+/* Subtle CRT Scanline Overlay */
+.terminal-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 10;
+}
+
 .terminal-header {
+  position: relative;
+  z-index: 20;
   background-color: #222222;
   color: #ffffff;
   padding: var(--space-2) var(--space-3);
@@ -473,6 +488,8 @@ input:focus-visible {
 .dot-green { background: #27c93f; }
 
 .terminal-body {
+  position: relative;
+  z-index: 20;
   padding: var(--space-4);
   font-size: 0.85rem;
   line-height: 1.5;
@@ -525,6 +542,40 @@ pre.ascii-art {
   margin-left: 0 !important;
 }
 
+/* Quick-Click Command Chips */
+.cmd-quick-chips {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+
+.cmd-chip-label {
+  font-size: 0.72rem;
+  color: #71717a;
+  font-weight: 700;
+}
+
+.cmd-chip {
+  background: transparent;
+  color: #00e5ff;
+  border: 1px solid #27272a;
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  user-select: none;
+}
+
+.cmd-chip:hover {
+  background-color: #00e5ff;
+  color: #0f1011;
+  border-color: #00e5ff;
+}
+
 .cmd-logs-container {
   max-height: 160px;
   overflow-y: auto;
@@ -552,13 +603,28 @@ pre.ascii-art {
   background: var(--accent-cyan);
 }
 
+/* Native Borderless Terminal Input Line */
 .cmd-input-line {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  background: #18181b;
-  border: 1px solid #3f3f46;
-  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  width: 100%;
+}
+
+.cmd-prompt-text {
+  color: #00ff66;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cmd-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .cmd-input {
@@ -567,8 +633,24 @@ pre.ascii-art {
   outline: none;
   color: #00ff66;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   width: 100%;
+  caret-color: #00ff66;
+}
+
+/* Blinking Terminal Cursor Accent */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #00ff66;
+  margin-left: 2px;
+  animation: blink-cursor 1s steps(2, start) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* Projects Section Grid */

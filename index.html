@@ -108,12 +108,23 @@
               <!-- Interactive Bash Console Feature -->
               <div class="hero-terminal-cmd">
                 <div id="cmdLogs" class="cmd-logs-container">
-                  <div style="color: #71717a; margin-top: 8px;">INTERACTIVE BASH CONSOLE (Type <span style="color: #00e5ff;">'help'</span>, <span style="color: #00e5ff;">'projects'</span>, or <span style="color: #00e5ff;">'contact'</span>)</div>
+                  <div class="cmd-quick-chips">
+                    <span class="cmd-chip-label">QUICK_COMMANDS:</span>
+                    <button type="button" class="cmd-chip" data-cmd="projects">[projects]</button>
+                    <button type="button" class="cmd-chip" data-cmd="skills">[skills]</button>
+                    <button type="button" class="cmd-chip" data-cmd="contact">[contact]</button>
+                    <button type="button" class="cmd-chip" data-cmd="honors">[honors]</button>
+                    <button type="button" class="cmd-chip" data-cmd="status">[status]</button>
+                    <button type="button" class="cmd-chip" data-cmd="clear">[clear]</button>
+                  </div>
                 </div>
                 
                 <div class="cmd-input-line">
-                  <span style="color: #00ff66; font-weight: 700;">anugrah@system-node:~$</span>
-                  <input type="text" id="cmdInput" class="cmd-input" placeholder="Type bash command..." autocomplete="off">
+                  <span class="cmd-prompt-text">anugrah@system-node:~$</span>
+                  <div class="cmd-input-wrapper">
+                    <input type="text" id="cmdInput" class="cmd-input" placeholder="type command..." autocomplete="off">
+                    <span class="terminal-cursor"></span>
+                  </div>
                 </div>
               </div>
             </div>
