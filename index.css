@@ -186,8 +186,8 @@ input:focus-visible {
 }
 
 .brand-logo-img {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   border: none;
   background: transparent;
