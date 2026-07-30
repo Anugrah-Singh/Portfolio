@@ -451,6 +451,9 @@ input:focus-visible {
   font-size: 0.82rem;
   line-height: 1.4;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow-x: auto;
 }
 
@@ -464,6 +467,44 @@ input:focus-visible {
 
 .terminal-typewriter {
   color: #ffffff;
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-3);
+}
+
+/* Hero Terminal Interactive Command Console */
+.hero-terminal-cmd {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed #3f3f46;
+  font-family: var(--font-mono);
+}
+
+.cmd-logs-container {
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 0.82rem;
+  color: #e4e4e7;
+  line-height: 1.45;
+  margin-bottom: var(--space-2);
+}
+
+.cmd-input-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  padding: 6px 10px;
+}
+
+.cmd-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ff66;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  width: 100%;
 }
 
 /* Projects Section Grid */

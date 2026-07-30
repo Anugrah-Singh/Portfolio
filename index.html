@@ -122,6 +122,18 @@
  [AI_AGENT_ENGINE_INIT] [FASTAPI] [NEXTJS]
               </pre>
               <div class="terminal-typewriter" id="typewriterText"></div>
+              
+              <!-- Interactive Bash Console Feature -->
+              <div class="hero-terminal-cmd">
+                <div id="cmdLogs" class="cmd-logs-container">
+                  <div style="color: #71717a; margin-top: 8px;">INTERACTIVE BASH CONSOLE (Type <span style="color: #00e5ff;">'help'</span>, <span style="color: #00e5ff;">'projects'</span>, or <span style="color: #00e5ff;">'contact'</span>)</div>
+                </div>
+                
+                <div class="cmd-input-line">
+                  <span style="color: #00ff66; font-weight: 700;">anugrah@system-node:~$</span>
+                  <input type="text" id="cmdInput" class="cmd-input" placeholder="Type bash command..." autocomplete="off">
+                </div>
+              </div>
             </div>
           </div>
 
@@ -401,19 +413,23 @@
     <div class="container">
       <div class="footer-grid">
         
-        <div>
-          <h2 style="color: #ffffff; margin-bottom: 12px;">INITIATE CONTACT</h2>
-          <p style="color: #a1a1aa; font-size: 0.9rem; margin-bottom: 20px;">
-            Open for software engineering roles, full-stack development, and AI agent engineering opportunities.
-          </p>
+        <!-- Contact Information Block -->
+        <div style="grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px;">
+          <div>
+            <h2 style="color: #ffffff; margin-bottom: 12px;">INITIATE CONTACT</h2>
+            <p style="color: #a1a1aa; font-size: 0.95rem; max-width: 540px; margin-bottom: 20px;">
+              Open for software engineering roles, full-stack development, and AI agent engineering opportunities. Use the interactive bash console in the Hero section or reach out directly below.
+            </p>
 
-          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem;">
-            <div>[EMAIL]: <a href="mailto:anugrahsinngh@gmail.com" style="color: #00ff66; text-decoration: underline;">anugrahsinngh@gmail.com</a></div>
-            <div>[PHONE]: <span style="color: #ffffff;">+91 9565540240</span></div>
-            <div>[LOCATION]: <span style="color: #ffffff;">Bangalore, India</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; font-family: var(--font-mono);">
+              <div>[EMAIL]: <a href="mailto:anugrahsinngh@gmail.com" style="color: #00ff66; text-decoration: underline;">anugrahsinngh@gmail.com</a></div>
+              <div>[PHONE]: <span style="color: #ffffff;">+91 9565540240</span></div>
+              <div>[LOCATION]: <span style="color: #ffffff;">Bangalore, India</span></div>
+            </div>
           </div>
 
-          <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <div style="display: flex; flex-direction: column; gap: 12px; min-width: 200px;">
+            <span style="font-size: 0.8rem; color: #71717a; font-family: var(--font-mono); font-weight: 700;">[DIRECT_LINKS]</span>
             <a href="https://github.com/Anugrah-Singh" target="_blank" rel="noopener" class="btn-brutal btn-brutal-sm" style="background: #27272a; color: #fff; border-color: #52525b;">
               GITHUB ↗
             </a>
@@ -423,22 +439,6 @@
             <a href="https://leetcode.com/u/Anugrah-Singh" target="_blank" rel="noopener" class="btn-brutal btn-brutal-sm" style="background: #27272a; color: #fff; border-color: #52525b;">
               LEETCODE ↗
             </a>
-          </div>
-        </div>
-
-        <!-- Terminal Interactive Simulator -->
-        <div class="terminal-cmd-box">
-          <div style="font-size: 0.8rem; color: #71717a; border-bottom: 1px solid #3f3f46; padding-bottom: 6px; margin-bottom: 12px;">
-            INTERACTIVE CONSOLE (Type 'help' or 'skills')
-          </div>
-          <div id="cmdLogs" style="height: 140px; overflow-y: auto; font-size: 0.82rem; color: #e4e4e7; font-family: var(--font-mono); line-height: 1.4;">
-            <div>System initialized successfully.</div>
-            <div>Type <span style="color: #00e5ff;">'contact'</span>, <span style="color: #00e5ff;">'projects'</span>, or <span style="color: #00e5ff;">'clear'</span>.</div>
-          </div>
-          
-          <div class="cmd-input-line">
-            <span style="color: #00ff66;">anugrah@portfolio:~$</span>
-            <input type="text" id="cmdInput" class="cmd-input" placeholder="Type command..." autocomplete="off">
           </div>
         </div>
 
