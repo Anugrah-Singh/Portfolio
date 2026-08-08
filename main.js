@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
           appendLog('Available commands: <span style="color: #00e5ff;">projects, skills, contact, honors, status, clear</span>');
           break;
         case 'projects':
-          appendLog('1. AI Hunger Games (<a href="https://ai-hunger-games-nine.vercel.app" target="_blank" style="color: #00e5ff; text-decoration: underline;">ai-hunger-games-nine.vercel.app</a>)');
+          appendLog('1. AI Hunger Games (<a href="https://ai-hunger-games-bidh.onrender.com/" target="_blank" style="color: #00e5ff; text-decoration: underline;">ai-hunger-games-bidh.onrender.com</a>)');
           appendLog('2. SAAS Team Workspace (<a href="https://saas-team-workspace.vercel.app" target="_blank" style="color: #00e5ff; text-decoration: underline;">saas-team-workspace.vercel.app</a>)');
           break;
         case 'skills':
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
         case 'honors':
         case 'achievements':
-          appendLog('4x Hackathon Winner | AI Multi-Agent Architect');
+          appendLog('5x Hackathon & Ideathon Winner | AI Multi-Agent Architect');
           break;
         case 'status':
           appendLog('STATUS: <span style="color: #00e676;">[ONLINE]</span> Open for Full-Stack & AI Engineering roles.');
