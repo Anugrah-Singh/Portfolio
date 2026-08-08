@@ -66,6 +66,8 @@
               <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
                 <a href="https://drive.google.com/drive/folders/1l5B5rf1Jvut48M40x68nILqbIUJ50R6V?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-brutal">RESUME ↗</a>
                 <a href="https://linkedin.com/in/anugrah-singh-a04b18356" target="_blank" rel="noopener noreferrer" class="btn-brutal" style="background: var(--bg-subtle); color: #000000;">LINKEDIN ↗</a>
+                <a href="https://github.com/Anugrah-Singh" target="_blank" rel="noopener noreferrer" class="btn-brutal" style="background: var(--bg-subtle); color: #000000;">GITHUB ↗</a>
+                <a href="https://x.com/anugahsingh" target="_blank" rel="noopener noreferrer" class="btn-brutal" style="background: var(--bg-subtle); color: #000000;">TWITTER ↗</a>
               </div>
             </div>
           </div>
@@ -166,30 +168,27 @@
               <div class="card-content">
                 <h3 class="project-title">AI HUNGER GAMES</h3>
                 <p class="project-desc">
-                  Full-stack multi-agent experimentation platform supporting 8 concurrent AI agents competing in deterministic tournament generations.
+                  React, TypeScript, Fastify, Vercel AI SDK, Redis
                 </p>
 
                 <div style="margin-bottom: 16px;">
                   <span class="tag-pill">React</span>
                   <span class="tag-pill">TypeScript</span>
-                  <span class="tag-pill">Python</span>
-                  <span class="tag-pill">FastAPI</span>
-                  <span class="tag-pill">SQLAlchemy</span>
-                  <span class="tag-pill">Groq API</span>
-                  <span class="tag-pill">SSE</span>
+                  <span class="tag-pill">Fastify</span>
+                  <span class="tag-pill">Vercel AI SDK</span>
+                  <span class="tag-pill">Redis</span>
                 </div>
 
                 <ul class="project-features-list">
-                  <li>Asynchronous orchestration engine supporting 8 AI agents & sequential voting</li>
-                  <li>Server-Sent Events (SSE) for live background generation updates</li>
-                  <li>Transactional SQLAlchemy writes with versioned Alembic migrations</li>
-                  <li>Bounded concurrency with exponential backoff & rate-limit handling</li>
+                  <li>Built an 8-agent LLM tournament with anonymous voting and cumulative scoring across 8-round generations, including tie handling, elimination, and AI-generated personality replacement.</li>
+                  <li>Developed shared Zod contracts and a provider-independent LLM interface across React and Fastify for type-safe APIs and interchangeable model integrations.</li>
+                  <li>Implemented structured AI responses, retries/timeouts, HTTP rate limiting, and atomic Redis-backed request quotas to coordinate usage limits across multiple API instances.</li>
                 </ul>
               </div>
             </div>
 
             <div class="card-actions">
-              <a href="https://ai-hunger-games-nine.vercel.app" target="_blank" rel="noopener" class="btn-brutal btn-brutal-sm">
+              <a href="https://ai-hunger-games-bidh.onrender.com/" target="_blank" rel="noopener" class="btn-brutal btn-brutal-sm">
                 LIVE DEMO ↗
               </a>
               <a href="https://github.com/Anugrah-Singh/ai-hunger-games" target="_blank" rel="noopener" class="btn-brutal btn-brutal-sm" style="background: var(--bg-subtle);">
@@ -213,26 +212,23 @@
               </a>
               
               <div class="card-content">
-                <h3 class="project-title">SAAS TEAM WORKSPACE</h3>
+                <h3 class="project-title">COORDRA</h3>
                 <p class="project-desc">
-                  Multi-tenant collaboration platform with 51 documented REST APIs, five-level role-based access control, and real-time Socket.IO synchronization.
+                  Next.js, TypeScript, Express, PostgreSQL, Socket.IO
                 </p>
 
                 <div style="margin-bottom: 16px;">
                   <span class="tag-pill">Next.js</span>
                   <span class="tag-pill">TypeScript</span>
-                  <span class="tag-pill">Node.js</span>
                   <span class="tag-pill">Express</span>
                   <span class="tag-pill">PostgreSQL</span>
                   <span class="tag-pill">Socket.IO</span>
-                  <span class="tag-pill">Zod</span>
                 </div>
 
                 <ul class="project-features-list">
-                  <li>5-column responsive Kanban interface with optimistic state updates</li>
-                  <li>JWT authentication, HttpOnly cookies, bcrypt, and Zod security validation</li>
-                  <li>Five-level RBAC: Owner, Admin, Manager, Member, and Viewer roles</li>
-                  <li>Neon database preview branches integrated with GitHub Actions CI/CD</li>
+                  <li>Built a multi-tenant workspace with JWT authentication and 5-level RBAC, enforcing tenant-scoped access across projects, tasks, comments, and memberships.</li>
+                  <li>Designed a PostgreSQL data layer with Drizzle migrations, relational constraints, indexes, and transactional audit workflows, with authenticated Socket.IO rooms synchronizing committed changes across clients.</li>
+                  <li>Implemented an approval-gated AI assistant that derives risks from verified workspace data and revalidates permissions before executing proposed writes.</li>
                 </ul>
               </div>
             </div>
@@ -267,89 +263,61 @@
           <!-- Category 1 -->
           <div class="skill-category-card">
             <h4 class="skill-category-title">[LANGUAGES]</h4>
-            <div class="skill-item-row">
-              <span>TypeScript</span>
-              <span>[LEVEL: 95%]</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="tag-pill">HTML</span>
+              <span class="tag-pill">CSS</span>
+              <span class="tag-pill">TypeScript</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">SQL</span>
+              <span class="tag-pill">Python</span>
             </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
-
-            <div class="skill-item-row">
-              <span>JavaScript</span>
-              <span>[LEVEL: 95%]</span>
-            </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
-
-            <div class="skill-item-row">
-              <span>Python</span>
-              <span>[LEVEL: 90%]</span>
-            </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
           </div>
 
           <!-- Category 2 -->
           <div class="skill-category-card">
-            <h4 class="skill-category-title">[FRAMEWORKS]</h4>
-            <div class="skill-item-row">
-              <span>React & Next.js</span>
-              <span>[LEVEL: 95%]</span>
+            <h4 class="skill-category-title">[FRONTEND]</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="tag-pill">React</span>
+              <span class="tag-pill">Next.js</span>
+              <span class="tag-pill">Tailwind CSS</span>
             </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 95%;"></div></div>
-
-            <div class="skill-item-row">
-              <span>FastAPI & Express</span>
-              <span>[LEVEL: 90%]</span>
-            </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
-
-            <div class="skill-item-row">
-              <span>Node.js</span>
-              <span>[LEVEL: 90%]</span>
-            </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
           </div>
 
           <!-- Category 3 -->
           <div class="skill-category-card">
-            <h4 class="skill-category-title">[DATABASES]</h4>
-            <div class="skill-item-row">
-              <span>PostgreSQL</span>
-              <span>[LEVEL: 88%]</span>
+            <h4 class="skill-category-title">[BACKEND]</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="tag-pill">Node.js</span>
+              <span class="tag-pill">Express</span>
+              <span class="tag-pill">Fastify</span>
+              <span class="tag-pill">REST APIs</span>
             </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
-
-            <div class="skill-item-row">
-              <span>SQLAlchemy & ORM</span>
-              <span>[LEVEL: 85%]</span>
-            </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
-
-            <div class="skill-item-row">
-              <span>MySQL</span>
-              <span>[LEVEL: 82%]</span>
-            </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 82%;"></div></div>
           </div>
 
           <!-- Category 4 -->
           <div class="skill-category-card">
-            <h4 class="skill-category-title">[TOOLS & CI/CD]</h4>
-            <div class="skill-item-row">
-              <span>Git & GitHub Actions</span>
-              <span>[LEVEL: 92%]</span>
+            <h4 class="skill-category-title">[DATABASES]</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="tag-pill">MongoDB</span>
+              <span class="tag-pill">PostgreSQL</span>
+              <span class="tag-pill">Redis</span>
             </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+          </div>
 
-            <div class="skill-item-row">
-              <span>Linux & Shell</span>
-              <span>[LEVEL: 88%]</span>
+          <!-- Category 5 -->
+          <div class="skill-category-card" style="grid-column: 1 / -1;">
+            <h4 class="skill-category-title">[TOOLS]</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="tag-pill">Git</span>
+              <span class="tag-pill">GitHub Actions</span>
+              <span class="tag-pill">Drizzle ORM</span>
+              <span class="tag-pill">Zod</span>
+              <span class="tag-pill">Vitest</span>
+              <span class="tag-pill">Socket.IO</span>
+              <span class="tag-pill">VSCode</span>
+              <span class="tag-pill">Codex</span>
+              <span class="tag-pill">Claude Code</span>
             </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
-
-            <div class="skill-item-row">
-              <span>Socket.IO & SSE</span>
-              <span>[LEVEL: 90%]</span>
-            </div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
           </div>
 
         </div>
